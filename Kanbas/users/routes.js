@@ -58,7 +58,7 @@ export default function UserRoutes(app) {
 
     const profile = async (req, res) => {
         const currentUser = req.session["currentUser"];
-        //currentUser = globalCurrentUser;
+        currentUser = globalCurrentUser;
         if (!currentUser) {
             res.sendStatus(401);
             return;
