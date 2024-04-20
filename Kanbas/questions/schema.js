@@ -12,7 +12,8 @@ const questionSchema = new mongoose.Schema({
     option2: {type:String, required:false},
     option3: {type:String, required:false},
     option4: {type:String, required:false},
-    answer: {type: String, required:true}
+    answer: {type: String, required:true},
+    points: {type: String, required:true}
 });
 
 export default questionSchema;
