@@ -1,10 +1,5 @@
 import mongoose from "mongoose";
 
-const questionSchema = new mongoose.Schema({
-    questionText: { type: String, required: true },
-    options: [{ type: String }],
-    correctOptionIndex: { type: Number, required: true }
-});
 
 const quizSchema = new mongoose.Schema({
     _id: {type: String},
@@ -41,8 +36,7 @@ const quizSchema = new mongoose.Schema({
     webcamRequired: { type: Boolean, default: false },
     lockQuestionsAfterAnswering: { type: Boolean, default: true },
     quizFor: { type: String, default: "Everyone" },
-    accessCode: String,
-    questions: [questionSchema]
+    accessCode: String
 }, { collection: "quizzes" });
 
 export default quizSchema;
