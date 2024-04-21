@@ -18,7 +18,6 @@ export default function QuestionRoutes(app){
     };
 
     const findQuestionById = async (req, res) => {
-        console.log("here")
         const question = await dao.findQuestionById(req.params.questionId, req.params.quizId);
         res.json(question);
     };
